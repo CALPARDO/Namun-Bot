@@ -1,20 +1,25 @@
 {
-  "name": "namun-bot",
-  "version": "1.0.0",
-  "description": "Namun",
+
+  "name": "Namun Bot",
+
+  "description": "Namun Discord Bot by Derin Durak",
+
+  "version": "0.0.0",
+
   "main": "index.js",
+
   "scripts": {
+
     "start": "node index.js"
+
   },
-  "keywords": [
-    "Namun"
-  ],
-  "author": "Derin Durak",
-  "license": "ISC",
+
   "dependencies": {
-    "discord.js": "^12.3.1",
-    "dotenv": "^8.2.0",
-    "languagedetect": "^2.0.0"
+
+    "discord.js": "11.1.0",
+
     "request": "2.81.0"
+
   }
+
 }
