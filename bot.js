@@ -4,7 +4,72 @@ const bot = new Discord.Client();
 
 const TOKEN = 'NjUyOTIyNDA1Mzc0OTE4Njg2.XevfYA.Y999x_ihGIO4y35JUy7_6Qv9ly4';
 
-
+const dict = {
+  "c o o l": ["🆒"],
+  "f r e e": ["🆓"],
+  "s o o n": ["🔜"],
+  "s o s": ["🆘"],
+  "a t m": ["🏧"],
+  "n e w": ["🆕"],
+  "a b c": ["🔤"],
+  "t o p": ["🔝"],
+  "o n": ["🔛"],
+  "i d": ["🆔"],
+  "v s": ["🆚"],
+  "a b": ["🆎"],
+  "c l": ["🆑"],
+  "w c": ["🚾"],
+  "n g": ["🆖"],
+  "o k": ["🆗"],
+  "u p": ["🆙"],
+  "t m": ["™️"],
+  0: ["0⃣"],
+  1: ["1⃣"],
+  2: ["2⃣"],
+  3: ["3⃣"],
+  4: ["4⃣"],
+  5: ["5⃣"],
+  6: ["6⃣"],
+  7: ["7⃣"],
+  8: ["8⃣"],
+  9: ["9⃣"],
+  "1 0": ["🔟"],
+  "*": ["*⃣"],
+  "+": ["➕"],
+  "-": ["➖"],
+  "#": ["#️⃣"],
+  "! !": ["‼️"],
+  "! ?": ["⁉️"],
+  "!": ["❗", "❕"],
+  "?": ["❓", "❔"],
+  a: ["🇦", "🅰️","🔼"],
+  b: ["🇧", "🅱️"],
+  c: ["🇨", "©️"],
+  d: ["🇩"],
+  e: ["🇪", "📧"],
+  f: ["🇫"],
+  g: ["🇬"],
+  h: ["🇭"],
+  i: ["🇮", "ℹ️", "🕧", "🕕"],
+  j: ["🇯"],
+  k: ["🇰"],
+  l: ["🇱","🕒"],
+  m: ["🇲", "〽️", "Ⓜ️"],
+  n: ["🇳"],
+  o: ["🇴", "🅾️", "⭕"],
+  p: ["🇵", "🅿️"],
+  q: ["🇶"],
+  r: ["🇷", "®️"],
+  s: ["🇸"],
+  t: ["🇹","✝️"],
+  u: ["🇺"],
+  v: ["🇻"],
+  w: ["🇼", "〰️"],
+  x: ["🇽", "❌", "❎", "✖️"],
+  y: ["🇾"],
+  z: ["🇿", "💤"],
+};
+const jp = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/
 
 const gossipsuccess = {
 
@@ -81,6 +146,14 @@ const help = {
       "name": "`!gossip`",
 
       "value": "to submit a text to gossip box\n *Usage:* `!gossip`+`text`\n *Example:* `!gossip IOC committee is boring`\n *Note:* Ensure that <@652922405374918686> is online and the gossip messages are deleted instantly from the public chat."
+
+    },
+	  
+     {
+
+      "name": "`!react`",
+
+      "value": "to send something made out of reactions. Just try ok? :D\n *Usage:* `!react`+`text`\n *Example:* `!react bruh`"
 
     },
 
@@ -648,7 +721,41 @@ bot.on("message", (msg) => {
 
         } 
 
+	else if (command == "react") {
 
+            let lm;
+            await msg.channel.messages.fetch({ limit: 2 }).then((res) => {
+                lm = res.array()[1];
+            });
+            let reaction = msg.content
+                .slice(7)
+                .replace(" ", "")
+                .toLowerCase()
+                .split("")
+                .join(" ");
+            msg.delete();
+            
+            for (const [key, value] of Object.entries(dict)) {
+                if (reaction.indexOf(key) > -1) {
+                    for (let i = 0; i < value.length; i++) {
+                        if (reaction.indexOf(value[i]) < 0) {
+                            reaction = reaction.replace(key, value[i]);
+                        } else if (i == value.length - 1) {
+                            reaction = reaction.replace(key, "");
+                        }
+                    }
+                }
+            }
+            reaction = reaction.split(" ");
+    
+            for (let i = 0; i < reaction.length; i++) {
+                if (reaction[i] != "") {
+                    try {
+                        await lm.react(reaction[i]);
+                    } catch (err) {}
+                }
+            }
+      }
 
         else if(command == "online")
 
