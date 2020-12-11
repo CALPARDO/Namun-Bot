@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 const bot = new Discord.Client();
 
-const TOKEN = 'NjUyOTIyNDA1Mzc0OTE4Njg2.XevfYA.Y999x_ihGIO4y35JUy7_6Qv9ly4';
+const TOKEN = 'Nzg2OTEyMTg4NzUzMjQ4MzE3.X9NTFQ.S44BTmX9BJy3O3PGsord3vjCqrQ';
 
 const dict = {
   "c o o l": ["🆒"],
