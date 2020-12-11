@@ -153,7 +153,7 @@ const help = {
 
       "name": "`!react`",
 
-      "value": "to send something made out of reactions. Just try ok? :D\n *Usage:* `!react`+`text`\n *Example:* `!react bruh`"
+      "value": "to send something made out of reactions. Just try ok? :D\n *Usage:* `!react`+`text`\n *Example:* `!react bruh`\n *This Feature is by <@473180728310366218>*"
 
     },
 
