@@ -388,7 +388,11 @@ bot.on("message", async (msg) => {
       }    
 
     }
-
+	
+    else if(msg.channel.id == "787373019538260009"){
+	    msg.react('787372644847714305')
+	    msg.react('787372671548915722')
+	  }
 
 
     else if(msg.content.startsWith("!")){
