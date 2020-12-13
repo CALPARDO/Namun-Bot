@@ -332,7 +332,7 @@ bot.once("ready", () => {
   console.log('Namun is online!');
 
   //bot.user.setActivity('Gossips', { type: 'LISTENING' });
-  bot.user.setGame('by Listening Gossips', 'https://www.twitch.tv/namun20');
+  bot.user.setActivity('https://www.twitch.tv/namun20', { type: 'STREAMING' });
 
   //bot.channels.cache.get('772530698212999209').send("Namun Bot is Online");
 
