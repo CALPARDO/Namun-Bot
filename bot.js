@@ -156,6 +156,13 @@ const help = {
       "value": "to send something made out of reactions. Just try ok? :D\n *Usage:* `!react`+`text`\n *Example:* `!react bruh`\n *This Feature is by <@473180728310366218>*"
 
     },
+    {
+
+      "name": "`!vote`",
+
+      "value": "to start voting"
+
+    },
 
     {
 
@@ -519,7 +526,10 @@ bot.on("message", async (msg) => {
 
         }
 
-
+	else if(command == "vote"){
+	    msg.react('787372644847714305')
+	    msg.react('787372671548915722')
+	  }
 
         else if(command == "help")
 
