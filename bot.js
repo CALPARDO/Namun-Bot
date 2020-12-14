@@ -527,9 +527,9 @@ bot.on("message", async (msg) => {
         }
 
 	else if(command == "vote"){
-	    msg.delete().catch()
-	    msg.react('787372644847714305')
-	    msg.react('787372671548915722')
+	    await msg.delete()
+	    await msg.react('787372644847714305')
+	    await msg.react('787372671548915722')
 	  }
 
         else if(command == "help")
