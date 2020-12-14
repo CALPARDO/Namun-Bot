@@ -350,7 +350,7 @@ bot.on("message", async (msg) => {
 
 
 
-    if(msg.content.toLowerCase().match(/amua gorum|yarrak|yarak|slut|orospu|göt|yarak kafalı|amına koyim|amığa|sikik|göt veren|your mom gay|ur mom gay|porn|fuck|bitch|cunt|d1ck|pussy|asshole|b1tch|b!tch|blowjob|cock|c0ck/)){
+    if(msg.content.toLowerCase().match(/ensest|amua gorum|yarrak|yarak|slut|orospu|göt|yarak kafalı|amına koyim|amığa|sikik|göt veren|your mom gay|ur mom gay|porn|fuck|bitch|cunt|d1ck|pussy|asshole|b1tch|b!tch|blowjob|cock|c0ck/)){
 
       msg.delete()
 
