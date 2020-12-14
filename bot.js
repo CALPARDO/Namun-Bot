@@ -527,6 +527,7 @@ bot.on("message", async (msg) => {
         }
 
 	else if(command == "vote"){
+	    msg.delete()
 	    msg.react('787372644847714305')
 	    msg.react('787372671548915722')
 	  }
