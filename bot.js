@@ -442,7 +442,7 @@ bot.on("message", async (msg) => {
 
             msg.react('👌');
 
-            let roles = ["IOC","UNEP","UNICEF","NATO","RUSREV","UNCSTD","ADMIN"]
+            let roles = ["IOC","UNEP","UNICEF","NATO","RUSREV","UNCSTD","ADMIN","DJ"]
 
             let r = content[1].toUpperCase()
 
