@@ -166,7 +166,7 @@ const help = {
 
       "name": "`!vote`",
 
-      "value": "to start voting"
+      "value": "to start voting\n*Example:* `!vote should I add this`"
 
     },
 
