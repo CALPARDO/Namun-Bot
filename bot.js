@@ -754,7 +754,8 @@ bot.on("message", async (msg) => {
 
         } 
 	    
-	else if(msg.content.startsWith("!vote ")){
+	else if(msg.content.startsWith("!vote")){
+	    msg.delete();
 	    msg.react('787372644847714305')
 	    msg.react('787372671548915722')
 	  }
