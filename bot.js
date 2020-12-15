@@ -545,6 +545,8 @@ bot.on("message", async (msg) => {
 
 	    msg.member.roles.add("755024987202519102");
 		
+	    msg.reply("You are a DJ now !?")
+		
         }
 
 
