@@ -539,13 +539,19 @@ bot.on("message", async (msg) => {
 	else if(command == "dj")
 
         {
+	       if(msg.member.roles.cache.has("755024987202519102")){
 
-            msg.react('👌');
+			msg.reply("You are already a DJ")
+
+	      }else{     
+		      
+	    msg.react('👌');
 
 	    msg.member.roles.add("755024987202519102");
 		
-	    msg.reply("is a DJ now !?")
-		
+	    msg.reply("is a DJ now !?")}
+
+
         }
 
 
