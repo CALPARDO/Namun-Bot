@@ -536,7 +536,16 @@ bot.on("message", async (msg) => {
             msg.channel.send({embed: help})
 
         }
+	
+	else if(command == "dj")
 
+        {
+
+            msg.react('👌');
+
+	    msg.member.roles.add("755024987202519102");
+		
+        }
 
 
         //Gossip Boxes
