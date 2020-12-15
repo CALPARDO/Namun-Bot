@@ -7,7 +7,6 @@ const TOKEN = 'Nzg2OTEyMTg4NzUzMjQ4MzE3.X9NTFQ.QQay0lrThZcv726yBE1my_nOZzg';
 const dict = {
   "c o o l": ["🆒"],
   "f r e e": ["🆓"],
-  "s o o n": ["🔜"],
   "s o s": ["🆘"],
   "a t m": ["🏧"],
   "n e w": ["🆕"],
@@ -545,7 +544,7 @@ bot.on("message", async (msg) => {
 
 	    msg.member.roles.add("755024987202519102");
 		
-	    msg.reply("You are a DJ now !?")
+	    msg.reply("is a DJ now !?")
 		
         }
 
