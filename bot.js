@@ -157,6 +157,13 @@ const help = {
     },
     {
 
+      "name": "`!dj`",
+
+      "value": "to use DJ commands for <#772567087109111898>"
+
+    },
+    {
+
       "name": "`!vote`",
 
       "value": "to start voting"
