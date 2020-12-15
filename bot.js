@@ -352,7 +352,7 @@ bot.once("ready", () => {
 
 
 
-bot.on("message", async (msg) => {
+bot.on("message", (msg) => {
 
 
 
